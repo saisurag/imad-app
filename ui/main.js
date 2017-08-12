@@ -1,19 +1,14 @@
 console.log('Loaded!');
+var counter = 0;
 
 
-// Change the text of the main-text div
-var element = document.getElementById('main-text');
-
-element.innerHTML = 'New value';
-
-// Move the image
-
-var img = ('https://i.ytimg.com/vi/pJXDzvmOrqw/hqdefault.jpg');
-var marginLeft = 0;
-function moveRight () {
-    marginLeft += 1;
-    img.style.marginLeft = marginLeft + 'px';
-}
-img.onclick = function () {
-    var interval = setInterval(moveRight, 50);
+var button = document.getElementById('counter');
+butto.onclick = function () {
+    
+  counter += 1;
+  var span = document.getElementById('count');
+  span.innerHTML = counter.toString();
+    
+    
+    
 };
