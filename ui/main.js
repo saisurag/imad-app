@@ -9,6 +9,6 @@ element.innerHTML = 'New value';
 // Move the image
 
 var img = document.getElementById('madi');
-img.mouseIsPressed = function () {
+img.onclick = function () {
     img.style.marginLeft = '100px';
 };
