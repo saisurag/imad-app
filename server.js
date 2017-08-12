@@ -108,16 +108,6 @@ app.get('/counter', function (req, res) {
     res.send(counter.toString());
 });
 
-var names = [];
-app.get('/submit-name', function(req, res) { // URL: /submit-name?name=xxxxx
-    // Get the name from the request
-    var name = req.query.name;
-    
-    names.push(name);
-    // JSON: Javascript Object Notation
-    res.send(JSON.stringify(names));
-});
-
 app.get('/:articleName', function (req, res) {
   var articleName = req.params.articleName;
   res.send(createTemplate(articles[articleName]));
@@ -133,6 +123,16 @@ app.get('/ui/main.js', function (req, res) {
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+});
+
+var names = [];
+app.get('/submit-name', function(req, res) { // URL: /submit-name?name=xxxxx
+    // Get the name from the request
+    var name = req.query.name;
+    
+    names.push(name);
+    // JSON: Javascript Object Notation
+    res.send(JSON.stringify(names));
 });
 
 
