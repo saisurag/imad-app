@@ -8,14 +8,12 @@ element.innerHTML = 'New value';
 
 // Move the image
 
-var img = document.getElementById('https://i.ytimg.com/vi/pJXDzvmOrqw/hqdefault.jpg');
+var img = ('https://i.ytimg.com/vi/pJXDzvmOrqw/hqdefault.jpg');
 var marginLeft = 0;
 function moveRight () {
     marginLeft += 1;
-    img.style.marginLeft = marginLeft + 'px'
+    img.style.marginLeft = marginLeft + 'px';
 }
 img.onclick = function () {
     var interval = setInterval(moveRight, 50);
 };
-
-var button = docume
