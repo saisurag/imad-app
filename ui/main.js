@@ -2,10 +2,10 @@ var button = document.getElementById('counter');
 
 button.onclick = function () {
     
-  // create a request object
+  // Create a request object
   var request = new XMLHttpRequest();
   
-  // capturing the response and storing it in a variable
+  // Capture the response and storing it in a variable
   request.onreadystatechange = function () {
       if (request.readyState === XMLHttpRequest.DONE) {
           // taking some action
@@ -15,11 +15,30 @@ button.onclick = function () {
                 span.innerHTML = counter.toString();
           }
       }
-    // not done yet
+    // Not done yet
   };
   
   
-  // make the request
+  // Make the request
     request.open('GET', 'http://lsaisurag.imad.hasura-app.io/counter', true);
     request.send(null);
+};
+
+
+// Submit name
+
+var nameInput = document.getElementById('name');
+var name = nameInput.value;
+var submit = document.getElementById('submit.btn');
+submit.onclick = function () {
+    // Make a request to the serer and send the name
+    
+    // Capture a list of names and render it as a list
+    var names = ['name1', 'name2', 'name3', 'name4'];
+    var list = '';
+    for (var i=0; i< names.length; i++) {
+        list += '<li>' + names[1] + '</li>';
+    }
+    var ul = document.getElementById('namelist');
+    ul.innerHTML = list;
 };
