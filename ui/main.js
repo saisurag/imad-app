@@ -14,6 +14,7 @@ button.onclick = function () {
             var span = document.getElementById('count');
             span.innerHTML = counter.toString();
           }
+          
       }
     // Not done yet
   };
@@ -24,14 +25,13 @@ button.onclick = function () {
 };
 
 // Submit name
-
 var submit = document.getElementById('submit.btn');
 submit.onclick = function () {
     
   // Create a request object
   var request = new XMLHttpRequest();
   
-  // Capture the response and storing it in a variable
+  // Capture the response and store it in a variable
   request.onreadystatechange = function () {
       if (request.readyState === XMLHttpRequest.DONE) {
           // taking some action
@@ -44,7 +44,7 @@ submit.onclick = function () {
                   list += '<li>' + names[i] + '</li>';
               }
               var ui = document.getElementById('namelist');
-              ul.innerHTML = 'list';
+              ul.innerHTML = list;
           }
       }
     // Not done yet
@@ -55,4 +55,5 @@ submit.onclick = function () {
     var name = nameInput.value;
     request.open('GET', 'http://lsaisurag.imad.hasura-app.io/submit-name?name=' + name, true);
     request.send(null);
+    
 };
