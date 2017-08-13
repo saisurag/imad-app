@@ -48,7 +48,7 @@ submit.onclick = function () {
               ul.innerHTML = list;
               }
           }
-      };
+      }
     // Not done yet
   };
   
