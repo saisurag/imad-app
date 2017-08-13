@@ -10,7 +10,9 @@ button.onclick = function () {
       if (request.readyState === XMLHttpRequest.DONE) {
           // Take some action
           if (request.status === 200) {
-
+            var counter = request.responseText;
+            var span = document.getElementById('count');
+            span.innerHTML = counter.toString();
           }
       }
     // Not done yet
@@ -27,7 +29,6 @@ var nameInput = document.getElementById('name');
 var name = nameInput.value;
 var submit = document.getElementById('submit.btn');
 submit.onclick = function () {
-    // Make a request to the serer and send the name
     
   // Create a request object
   var request = new XMLHttpRequest();
@@ -46,7 +47,6 @@ submit.onclick = function () {
               }
               var ui = document.getElementById('namelist');
               ul.innerHTML = list;
-              }
           }
       }
     // Not done yet
