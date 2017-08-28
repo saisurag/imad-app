@@ -14,61 +14,6 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-
-var articles = {
-    'article-one': {
-    title: 'Article One | Sai Surag',
-    date: 'August 12, 2017',
-    heading: 'Article One',
-    content: ` 
-    <p>
-            Lorem ipsum dolor sit amet, vel vitae tempor incorrupte ea, natum regione nominavi pri ea. 
-        </p>
-        
-        <p>
-            Lorem ipsum dolor sit amet, vel vitae tempor incorrupte ea, natum regione nominavi pri ea. 
-        </p>
-        
-        <p>
-            Lorem ipsum dolor sit amet, vel vitae tempor incorrupte ea, natum regione nominavi pri ea.
-        </p> `
-},
-    'article-two': {
-    title: 'Article Two | Sai Surag',
-    date: 'August 13, 2017',
-    heading: 'Article Two',
-    content: ` 
-    <p>
-            Lorem ipsum dolor sit amet, vel vitae tempor incorrupte ea, natum regione nominavi pri ea. 
-        </p>
-        
-        <p>
-            Lorem ipsum dolor sit amet, vel vitae tempor incorrupte ea, natum regione nominavi pri ea. 
-        </p>
-        
-        <p>
-            Lorem ipsum dolor sit amet, vel vitae tempor incorrupte ea, natum regione nominavi pri ea.
-        </p> `
-},
-    'article-three': {
-    title: 'Article Three | Sai Surag',
-    date: 'August 14, 2017',
-    heading: 'Article Three',
-    content: ` 
-    <p>
-            Lorem ipsum dolor sit amet, vel vitae tempor incorrupte ea, natum regione nominavi pri ea. 
-        </p>
-        
-        <p>
-            Lorem ipsum dolor sit amet, vel vitae tempor incorrupte ea, natum regione nominavi pri ea. 
-        </p>
-        
-        <p>
-            Lorem ipsum dolor sit amet, vel vitae tempor incorrupte ea, natum regione nominavi pri ea.
-        </p> `
-}
-};
-    
 function createTemplate (data) {
     var title = data.title;
     var heading = data.heading;
